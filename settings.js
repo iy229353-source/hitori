@@ -2,16 +2,14 @@ const fs = require('fs');
 const chalk = require('chalk');
 
 /*
-	* Create By Naze
-	* Follow https://github.com/nazedev
-	* Whatsapp : https://whatsapp.com/channel/0029VaWOkNm7DAWtkvkJBK43
+	
 */
 
 //~~~~~~~~~~~~< GLOBAL SETTINGS >~~~~~~~~~~~~\\
 
-global.owner = ['6282113821188'] //['628','628'] 2 owner atau lebih
-global.author = 'Nazedev'
-global.botname = 'Hitori Bot'
+global.owner = ['6285783706256'] //['628','628'] 2 owner atau lebih
+global.author = 'diana'
+global.botname = 'mimin nj'
 global.packname = 'Bot WhatsApp'
 global.listprefix = ['+','!','.']
 
@@ -19,7 +17,7 @@ global.listv = ['•','●','■','✿','▲','➩','➢','➣','➤','✦','✧
 global.tempatDB = 'database.json' // Taruh url mongodb di sini jika menggunakan mongodb. Format : 'mongodb+srv://...'
 global.tempatStore = 'baileys_store.json' // Taruh url mongodb di sini jika menggunakan mongodb. Format : 'mongodb+srv://...'
 global.pairing_code = true
-global.number_bot = '' // Kalo pake panel bisa masukin nomer di sini, jika belum ambil session. Format : '628xx'
+global.number_bot = '6285893096232' // Kalo pake panel bisa masukin nomer di sini, jika belum ambil session. Format : '628xx'
 
 global.fake = {
 	anonim: 'https://telegra.ph/file/95670d63378f7f4210f03.png',
@@ -71,13 +69,14 @@ global.APIKeys = {
 
 // Lainnya
 
-global.badWords = ['dongo'] // input kata-kata toxic yg lain. ex: ['dongo','dongonya']
+global.badWords = ['dongo,anjing,babi kontol,asu,teleng'] // input kata-kata toxic yg lain. ex: ['dongo','dongonya']
 global.chatLength = 500
 
-let file = require.resolve(__filename)
+let file = require.resolve(__bot-)
 fs.watchFile(file, () => {
 	fs.unwatchFile(file)
-	console.log(chalk.redBright(`Update ${__filename}`))
+	console.log(chalk.redBright(`Update ${__bot}`))
 	delete require.cache[file]
 	require(file)
+
 });
